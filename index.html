@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DCLA Cultural Organizations</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <link rel="stylesheet" href="map.css">
+   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>
+   <script src="dcla.js"></script>
+   <script src="nycneighborhoods.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>NYC Cultural Organizations</h1>
+      <p>This is an interactive map of cultural organizations in New York City, sourced from the <a href=https://www.nyc.gov/site/dcla/index.page>NYC Department of Cultural Affairs (DCLA)</a>.</p>
+      <p>I study organizations and am interested in how they are classified, including what gets classified as an organization. Looking at their website, there is a list of organizations 
+        that provide services, but no map or guide. So I wanted to explore the data spatially, rendering a prototype map.</p>
+      <p>Since this is a minimum viable product approach final project, I can't go into the level of detail I would like to. But I may examine further over time.</p>
+      <p>As you explore this data, what questions come to mind?</p>
+      <div id="map"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>

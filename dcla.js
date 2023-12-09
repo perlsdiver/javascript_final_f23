@@ -1,3 +1,20 @@
+/* ==============================
+
+DATA 70600 / DHUM 70600 - Intro to JavaScript
+Instructor: Stephen Zweibel
+
+Data source: NYC Open Data, DCLA Cultural Organizations
+https://data.cityofnewyork.us/Recreation/DCLA-Cultural-Organizations/u35m-9t32
+
+Ian Williams
+https://github.com/perlsdiver
+
+================================= */
+
+const dcla = {
+  "type": "FeatureCollection",
+
+  "features":
 [
   {
     "Organization Name": "122 Community Center Inc.",
@@ -41543,4 +41560,4 @@
     "BBL": 3020040048,
     "NTA": "Fort Greene"
   }
-]
+]}
