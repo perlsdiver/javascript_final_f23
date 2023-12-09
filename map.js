@@ -17,31 +17,34 @@ L.geoJSON(nyc, {
         return {
             color: "red",
             fillColor: "yellow",
-            fillOpacity: 0.5
+            fillOpacity: 0.3,
+            weight: 1.5
         };
     }
 }).addTo(nycMap);
 
 // adding layer cultural organizations data
 
-L.geoJSON(dcla).addTo(nycMap);
+L.geoJSON(dcla2).addTo(nycMap);
 console.log();
 
 // loading DCLA data
 
-dcla.forEach(function(entry) {
+dcla2.features.forEach(function(entry) {
     // Check if latitude and longitude data is available
     if (entry.Latitude && entry.Longitude) {
+        console.log()
         // Create a marker at the given position
-        var marker = L.marker([entry.Latitude, entry.Longitude]).addTo(nycMapmap);
+        var marker = L.marker([entry.Latitude, entry.Longitude]).addTo(nycMap);
+        console.log()
 
         // Create a popup with the desired information
         var popupContent = `
             <strong>Organization Name:</strong> ${entry["Organization Name"]}<br>
             <strong>Address:</strong> ${entry.Address}, ${entry.City}, ${entry.State}, ${entry.Postcode}<br>
             <strong>Phone:</strong> ${entry["Main Phone #"]}<br>
-            <strong>Latitude:</strong> ${entry.Latitude}<br>
-            <strong>Longitude:</strong> ${entry.Longitude}
+            <strong>Neighborhood:</strong> ${entry.NTA}<br>
+            <strong>Discipline:</strong> ${entry["Discipline"]}<br>
         `;
         
         // Bind the popup to the marker
