@@ -7,20 +7,25 @@ h1 {
     text-shadow: 2px 2px 2px #000000;
 }
 
-section {
+.flex-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
+    background-color: #000000;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 10px;
+    font-size: 13px;
+  }
 p {
     font-family: "Lucida Console", "Courier New", monospace;
   }
 
 #map { 
-    height: 800px; 
-    width: 75%;
+    height: 600px; 
+    width: 90%;
 }

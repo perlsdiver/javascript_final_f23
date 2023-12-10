@@ -3,7 +3,9 @@
 
 This is my final project for DATA 70600: Intro to JavaScript. I focused on cultural organizational data from the NYC Department of Cultural Affairs (DCLA).
 
-I was curious how "cultural organization" was defined. I found several categories, as "Discipline", without a clear definition.
+I was curious how "cultural organization" was defined. The DCLA website itself didn't have a specific definition, but the mission helped. Wikipedia described it as synonymous with "cultural institution".
+
+Within the data set, I found several categories, as "Discipline", without a clear definition.
 
 Theater: 327
 Multi-Discipline, Performing: 169

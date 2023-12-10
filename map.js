@@ -69,8 +69,9 @@ dcla2.features.forEach(function(entry) {
             <strong>Organization Name:</strong> ${entry["Organization Name"]}<br>
             <strong>Address:</strong> ${entry.Address}, ${entry.City}, ${entry.State}, ${entry.Postcode}<br>
             <strong>Phone:</strong> ${entry["Main Phone #"]}<br>
-            <strong>Neighborhood:</strong> ${entry.NTA}<br>
             <strong>Discipline:</strong> ${entry["Discipline"]}<br>
+            <strong>Neighborhood:</strong> ${entry.NTA}<br>
+    
         `;
         
         // Bind the popup to the marker
