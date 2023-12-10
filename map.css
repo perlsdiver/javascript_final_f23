@@ -7,6 +7,28 @@ h1 {
     text-shadow: 2px 2px 2px #000000;
 }
 
+h2 {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+h3 {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+p {
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -19,10 +41,7 @@ h1 {
     background-color: #f1f1f1;
     margin: 10px;
     padding: 10px;
-    font-size: 13px;
-  }
-p {
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 16px;
   }
 
 #map { 
