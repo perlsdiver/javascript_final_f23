@@ -28,8 +28,34 @@ L.geoJSON(nyc, {
 L.geoJSON(dcla2).addTo(nycMap);
 console.log();
 
-// loading DCLA data
+// // assign colors for each discipline
+// const disciplineColors = {
+//     'Architecture/Design': '#fbb4ae',
+//     'Botanical': '#b3cde3',
+//     'Crafts': '#ccebc5',
+//     'Dance': '#decbe4',
+//     'Film/Video/Audio': '#fed9a6',
+//     'Folk Arts': '#ffffcc', 
+//     'Humanities': '#e5d8bd',
+//     'Literature': '#fddaec',
+//     'Multi-Discipl, Perf & Non-Perf': '#f2f2f2',
+//     'Multi-Discipline, Non-Perform': '#b3e2cd',
+//     'Multi-Discipline, Performing': '#fdcdac',
+//     'Museum': '#cbd5e8',
+//     'Music': '#f4cae4',
+//     'New Media': '#e6f5c9',
+//     'Other': '#fff2ae',
+//     'Photography': '#f1e2cc',   
+//     'Science': '#cccccc',
+//     'Theater': '#d9d9d9',
+//     'Visual Arts': '#fddaec',
+//     'Zoo': '#f2f2f2'
+// };
 
+
+// loading DCLA data (clean up later)
+
+// iterating on the data
 dcla2.features.forEach(function(entry) {
     // Check if latitude and longitude data is available
     if (entry.Latitude && entry.Longitude) {
