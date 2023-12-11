@@ -28,7 +28,7 @@ L.geoJSON(nyc, {
 L.geoJSON(dcla2).addTo(nycMap);
 console.log();
 
-// // assign colors for each discipline
+// // assign colors for each discipline (for markers)
 // const disciplineColors = {
 //     'Architecture/Design': '#fbb4ae',
 //     'Botanical': '#b3cde3',
@@ -52,8 +52,8 @@ console.log();
 //     'Zoo': '#f2f2f2'
 // };
 
-
-// loading DCLA data (clean up later)
+// reading dcla data - I built it as a function to be able to filter out entries with no lat/long data
+// but that didn't work, so I pre-processsed the data set in R
 
 // iterating on the data
 dcla2.features.forEach(function(entry) {
@@ -82,4 +82,5 @@ dcla2.features.forEach(function(entry) {
     }
 });
 
+// customized cursor for the map
 $('.leaflet-container').css('cursor','crosshair');
