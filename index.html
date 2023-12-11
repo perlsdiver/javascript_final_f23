@@ -19,11 +19,11 @@
         <h2>Data 70600: Intro to JavaScript | Fall 2023</h2>
         <h3>Ian Williams</h3>
         <br>
-      <p>This is an interactive map of cultural organizations in New York City, sourced from <a href=https://opendata.cityofnewyork.us/>NYC Open Data</a>. 
+      <p>This is an interactive map of cultural organizations in New York City, using data sourced from <a href=https://opendata.cityofnewyork.us/>NYC Open Data</a>. 
         The data set was provided by the <a href=https://www.nyc.gov/site/dcla/index.page>NYC Department of Cultural Affairs (DCLA)</a>.</p>
       <p>I study organizations and am interested in what the taxonomy of cultural organizations is. Looking at their website, there is a list of organizations 
         that provide services, but no map or guide.
-      <p> Of note, from the data, over 500 organizations did not have geocoordinates and thus were filtered out from the dataset displayed here. 
+      <p> <strong>Of note</strong>, from the data, over 500 organizations did not have geocoordinates and thus were filtered out from the dataset displayed here. I used R to process the data in CSV format before converting it to JSON, as I am more familiar with it than JavaScript.
         No websites for the organizations were included in the data.
       <p>This project renders a spatial representation of the organizations, layered over NYC neighborhood boundaries we used in a class exercise, 
         offering a way to explore the distribution of cultural organizations across neighborhoods.</p>

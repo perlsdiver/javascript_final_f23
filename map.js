@@ -82,3 +82,4 @@ dcla2.features.forEach(function(entry) {
     }
 });
 
+$('.leaflet-container').css('cursor','crosshair');
