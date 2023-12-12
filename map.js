@@ -3,11 +3,14 @@ nycMap = L.map("map");
 
 // create tile layer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
+    maxZoom: 17,
+    minZoom: 10,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(nycMap);
 
-nycMap.setView([40.7128, -74.0060], 10);
+nycMap.setView([40.7128, -74.0060], 11);
+
+
 
 L.geoJSON(nyc).addTo(nycMap);
 
@@ -28,7 +31,7 @@ L.geoJSON(nyc, {
 L.geoJSON(dcla2).addTo(nycMap);
 console.log();
 
-// // assign colors for each discipline (for markers)
+// // assign colors for each discipline (for)
 // const disciplineColors = {
 //     'Architecture/Design': '#fbb4ae',
 //     'Botanical': '#b3cde3',
@@ -84,3 +87,26 @@ dcla2.features.forEach(function(entry) {
 
 // customized cursor for the map
 $('.leaflet-container').css('cursor','crosshair');
+
+L.Control.Watermark = L.Control.extend({
+    onAdd: function(map) {
+        var img = L.DomUtil.create('img');
+
+        img.src = 'dclalogo.svg';
+        img.style.width = '100px';
+
+        return img;
+    },
+
+    onRemove: function(map) {
+        // Nothing to do here
+    }
+});
+
+L.control.watermark = function(opts) {
+    return new L.Control.Watermark(opts);
+}
+console.log();
+
+L.control.watermark({ position: 'bottomleft' }).addTo(map);
+console.log();
