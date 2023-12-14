@@ -31,7 +31,8 @@ L.geoJSON(nyc, {
 L.geoJSON(dcla2).addTo(nycMap);
 console.log();
 
-// // assign colors for each discipline (for)
+// assign colors for each discipline  - still working this out
+
 // const disciplineColors = {
 //     'Architecture/Design': '#fbb4ae',
 //     'Botanical': '#b3cde3',
