@@ -26,6 +26,14 @@ L.geoJSON(nyc, {
     }
 }).addTo(nycMap);
 
+
+// adding neighborhood name popups
+L.geoJSON(nyc, {
+    onEachFeature: function(feature, layer) {
+        layer.bindPopup("<h4>" + feature.properties.borough + "</h34 <hr> <h5>" + feature.properties.neighborhood + "</h5>");
+    }
+}).addTo(nycMap);
+
 // adding layer cultural organizations data
 
 L.geoJSON(dcla2).addTo(nycMap);
