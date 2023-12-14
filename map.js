@@ -8,24 +8,39 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(nycMap);
 
+// settting default view
 nycMap.setView([40.7128, -74.0060], 11);
 
-
-
+// adding geoJSON data
 L.geoJSON(nyc).addTo(nycMap);
 
-// add some fill color to the map
+// adding fill colors to the map, customized for each borough
 L.geoJSON(nyc, {
     style: function(feature) {
-        return {
+            var borough = feature.properties.borough;
+            var fillColor;
+
+            if (borough === 'Bronx') {
+                fillColor = 'green';
+            } else if (borough === 'Brooklyn') {
+                fillColor = 'yellow';
+            } else if (borough === 'Manhattan') {
+                fillColor = 'blue';
+            } else if (borough === 'Queens') {
+                fillColor = 'purple';
+            } else if (borough === 'Staten Island') {
+                fillColor = 'white';
+            } else {
+                fillColor = 'defaultColor';
+            }
+            return {
             color: "red",
-            fillColor: "yellow",
-            fillOpacity: 0.3,
-            weight: 1.5
+            fillColor: fillColor,
+            fillOpacity: 0.5,
+            weigh: 1.5,
         };
     }
 }).addTo(nycMap);
-
 
 // adding neighborhood name popups, styled with custom CSS
 L.geoJSON(nyc, {
@@ -97,6 +112,7 @@ dcla2.features.forEach(function(entry) {
 // customized cursor for the map
 $('.leaflet-container').css('cursor','crosshair');
 
+// watermark - not working yet
 L.Control.Watermark = L.Control.extend({
     onAdd: function(map) {
         var img = L.DomUtil.create('img');

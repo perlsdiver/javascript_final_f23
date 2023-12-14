@@ -19,16 +19,20 @@
         <h2>Data 70600: Intro to JavaScript | Fall 2023</h2>
         <h3>Ian Williams</h3>
         <br>
-      <p>This is an interactive map of cultural organizations in New York City, using data sourced from <a href=https://data.cityofnewyork.us/Recreation/DCLA-Cultural-Organizations/u35m-9t32 target="_blank">NYC Open Data</a>. 
-        The data set was provided by the <a href=https://www.nyc.gov/site/dcla/index.page target="_blank">NYC Department of Cultural Affairs (DCLA)</a>.</p>
-      <p>I study organizations, so I am interested in what the taxonomy of cultural organizations is within this list. Looking at their website, there is a list of organizations 
-        that provide services, but no map or guide. There is also not a definitive taxonomy.
+      <h4>Data Sources</h4>
+        <p>This is an interactive map of cultural organizations in New York City, using data sourced from <a href=https://data.cityofnewyork.us/Recreation/DCLA-Cultural-Organizations/u35m-9t32 target="_blank">NYC Open Data</a>. 
+        The data set was provided by the <a href=https://www.nyc.gov/site/dcla/index.page target="_blank">NYC Department of Cultural Affairs (DCLA)</a>. It also uses <a href= https://data.beta.nyc/dataset/pediacities-nyc-neighborhoods/resource/35dd04fb-81b3-479b-a074-a27a37888ce7 target="_blank"> data from betNYC</a> for NYC neighborhood boundaries, which we used in <a href=https://zweibel.net/Javascripting-Graduate-Student/workshop/javascript/?page=14 target="_blank">Lesson 14</a>.</p>
+      <h4>Rationale</h4>
+        <p>I study organizations, so I am interested in what the taxonomy of cultural organizations is within this list. Looking at the agency's website, there is a list of organizations 
+        that provide services, but no map or guide that is easily navigable. There is also not a definitive taxonomy of the types of cultural organizations. Exploring the data set helped me to see that in DCLA's implicit taxonomy, 
+        there are 20 types, classified as "Discipline."
       <p>This project renders a spatial representation of the organizations, layered over NYC neighborhood boundaries we used in a class exercise, 
         offering a way to explore the distribution of cultural organizations across neighborhoods.</p>
       <p>Of course, the neighborhood definitions are also different in some cases, as evidenced in the pop-up labels.</p>
       <p>Since this final project is a minimum viable product, I can't go into the level of detail I would like to. 
         But I may tinker and improve over time.</p>
-      <p>Some things to add could include choropleth shading to show organizational density across boroughs, custom icons for each type of organization, 
+      <h4>Future improvements</h4>
+        <p>Some things to add could include choropleth shading to show organizational density across boroughs, custom icons for each type of organization, 
         and a drop-down menu that can sort between the different types or display by borough.</p>
         <p> <strong>Note:</strong> from the data, over 500 organizations did not have geocoordinates and thus were filtered out from the dataset displayed here. I used R to process the data in CSV format before converting it to JSON, as I am more familiar with it than JavaScript.
           No websites for the organizations were included in the data. The data set lists 20 different variables for "Discipline" with no further explanation.
