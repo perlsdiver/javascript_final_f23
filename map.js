@@ -56,28 +56,28 @@ console.log();
 
 // assign colors for each discipline  - still working this out
 
-// const disciplineColors = {
-//     'Architecture/Design': '#fbb4ae',
-//     'Botanical': '#b3cde3',
-//     'Crafts': '#ccebc5',
-//     'Dance': '#decbe4',
-//     'Film/Video/Audio': '#fed9a6',
-//     'Folk Arts': '#ffffcc', 
-//     'Humanities': '#e5d8bd',
-//     'Literature': '#fddaec',
-//     'Multi-Discipl, Perf & Non-Perf': '#f2f2f2',
-//     'Multi-Discipline, Non-Perform': '#b3e2cd',
-//     'Multi-Discipline, Performing': '#fdcdac',
-//     'Museum': '#cbd5e8',
-//     'Music': '#f4cae4',
-//     'New Media': '#e6f5c9',
-//     'Other': '#fff2ae',
-//     'Photography': '#f1e2cc',   
-//     'Science': '#cccccc',
-//     'Theater': '#d9d9d9',
-//     'Visual Arts': '#fddaec',
-//     'Zoo': '#f2f2f2'
-// };
+const disciplineColors = {
+    'Architecture/Design': '#fbb4ae',
+    'Botanical': '#b3cde3',
+    'Crafts': '#ccebc5',
+    'Dance': '#decbe4',
+    'Film/Video/Audio': '#fed9a6',
+    'Folk Arts': '#ffffcc', 
+    'Humanities': '#e5d8bd',
+    'Literature': '#fddaec',
+    'Multi-Discipl, Perf & Non-Perf': '#f2f2f2',
+    'Multi-Discipline, Non-Perform': '#b3e2cd',
+    'Multi-Discipline, Performing': '#fdcdac',
+    'Museum': '#cbd5e8',
+    'Music': '#f4cae4',
+    'New Media': '#e6f5c9',
+    'Other': '#fff2ae',
+    'Photography': '#f1e2cc',   
+    'Science': '#cccccc',
+    'Theater': '#d9d9d9',
+    'Visual Arts': '#fddaec',
+    'Zoo': '#f2f2f2'
+};
 
 // reading dcla data - I built it as a function to be able to filter out entries with no lat/long data
 // but that didn't work, so I pre-processsed the data set in R
@@ -87,8 +87,18 @@ dcla2.features.forEach(function(entry) {
     // Check if latitude and longitude data is available
     if (entry.Latitude && entry.Longitude) {
         console.log()
+
+        if (entry.Latitude && entry.Longitude) {
+            // Create a custom icon
+            var customIcon = L.icon({
+                iconUrl: 'icons8-map-pin-50.png',
+                iconSize: [25, 25],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+            });
+
         // Create a marker at the given position
-        var marker = L.marker([entry.Latitude, entry.Longitude]).addTo(nycMap);
+        var marker = L.marker([entry.Latitude, entry.Longitude], {icon: customIcon}).addTo(nycMap);
         console.log()
 
         // Create a popup with the desired information
@@ -107,7 +117,7 @@ dcla2.features.forEach(function(entry) {
         // Handle cases where latitude or longitude is missing
         console.log(`Missing location data for: ${entry["Organization Name"]}`);
     }
-});
+}});
 
 // customized cursor for the map
 $('.leaflet-container').css('cursor','crosshair');
