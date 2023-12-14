@@ -93,11 +93,11 @@ dcla2.features.forEach(function(entry) {
 
         // Create a popup with the desired information
         var popupContent = `
-            <strong>Organization Name:</strong> ${entry["Organization Name"]}<br>
-            <strong>Address:</strong> ${entry.Address}, ${entry.City}, ${entry.State}, ${entry.Postcode}<br>
-            <strong>Phone:</strong> ${entry["Main Phone #"]}<br>
-            <strong>Discipline:</strong> ${entry["Discipline"]}<br>
-            <strong>Neighborhood:</strong> ${entry.NTA}<br>
+            <p><strong>Organization Name:</strong> ${entry["Organization Name"]}</p>
+            <p><strong>Address:</strong> ${entry.Address}, ${entry.City}, ${entry.State}, ${entry.Postcode}</p>
+            <p><strong>Phone:</strong> ${entry["Main Phone #"]}</p>
+            <p><strong>Discipline:</strong> ${entry["Discipline"]}</p>
+            <p><strong>Neighborhood:</strong> ${entry.NTA}</p>
     
         `;
         
