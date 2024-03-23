@@ -91,7 +91,7 @@ dcla2.features.forEach(function(entry) {
         if (entry.Latitude && entry.Longitude) {
             // Create a custom icon
             var customIcon = L.icon({
-                iconUrl: 'icon2-map-pin-50.png',
+                iconUrl: 'icons8-map-pin-50.png',
                 iconSize: [25, 25],
                 iconAnchor: [12, 41],
                 popupAnchor: [1, -34],
